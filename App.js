@@ -1,13 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableWithoutFeedback, TouchableHighlight, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView style={styles.container}>
+      <Text>Rolls Royce TEST</Text>
+      <TouchableOpacity onPress={() => console.log('test')}>
+        <Image 
+        source={{ 
+          width: 200,
+          height: 200,
+          uri: "https://i.imgur.com/oPgSc6Q.jpg"}} />
+          </TouchableOpacity>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
